@@ -12,21 +12,21 @@ const places = {
         name: 'Berat, Albania',
         text: 'My time in Albania.',
         folder: 'Albania',
-        cover: 'IMG.JPG', 
+        cover: 'IMG0.JPG', 
         photos: ['IMG1.JPG','IMG2.JPG']
     },
     Bath: {
         name: 'Bath, UK',
         text: 'My time in Bath.',
         folder: 'Bath',
-        cover: 'IMG.JPG', 
+        cover: 'IMG0.JPG', 
         photos: ['IMG1.JPG']
     },
     Belfast: {
         name: 'Belfast, UK',
         text: 'My time in Belfast.',
         folder: 'Belfast',
-        cover: 'IMG.JPG', 
+        cover: 'IMG0.JPG', 
         photos: ['IMG1.JPG','IMG2.JPG','IMG3.JPG','IMG4.JPG','IMG5.JPG']
     },
     Birmingham: {
@@ -54,7 +54,7 @@ const places = {
         name: 'Edinbrugh, UK',
         text: 'My time in Edingrugh.',
         folder: 'Edinbrugh',
-        cover: 'IMG.JPG', 
+        cover: 'IMG0.JPG', 
         photos: ['IMG1.JPG']
     },
     Leicester: {
@@ -68,7 +68,7 @@ const places = {
         name: 'London, UK',
         text: 'My time in London.',
         folder: 'London',
-        cover: 'IMG.JPG', 
+        cover: 'IMG0.JPG', 
         photos: ['IMG1.JPG','IMG2.JPG']
     },
     Montenegro: {
@@ -82,7 +82,7 @@ const places = {
         name: 'New Castle Upon Tyne, UK',
         text: 'My time in New Castle Upon Tyne.',
         folder: 'New_Castle',
-        cover: 'IMG.PNG', 
+        cover: 'IMG0.PNG', 
         photos: ['IMG1.PNG']
     },
     Scotland: {
@@ -96,7 +96,7 @@ const places = {
         name: 'Skegness, UK',
         text: 'My time in Skegness.',
         folder: 'Skegness',
-        cover: 'IMG.JPG', 
+        cover: 'IMG0.JPG', 
         photos: ['IMG1.JPG','IMG2.JPG']
     },
     Stonehenge: {
@@ -117,7 +117,7 @@ const places = {
         name: 'York, UK',
         text: 'My time in York.',
         folder: 'York',
-        cover: 'IMG.JPG', 
+        cover: 'IMG0.JPG', 
         photos: ['IMG1.JPG']
     }
     
