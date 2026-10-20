@@ -8,35 +8,35 @@
 // To add a place:  copy one block, change the key, name, text and folder.
 
 const places = {
-    albania: {
+    Albania: {
         name: 'Berat, Albania',
         text: 'My time in Albania.',
         folder: 'Albania',
         cover: 'IMG.JPG', 
         photos: ['IMG1.JPG','IMG2.JPG']
     },
-    bath: {
+    Bath: {
         name: 'Bath, UK',
         text: 'My time in Bath.',
         folder: 'Bath',
         cover: 'IMG.JPG', 
         photos: ['IMG1.JPG']
     },
-    belfast: {
+    Belfast: {
         name: 'Belfast, UK',
         text: 'My time in Belfast.',
         folder: 'Belfast',
         cover: 'IMG.JPG', 
         photos: ['IMG1.JPG','IMG2.JPG','IMG3.JPG','IMG4.JPG','IMG5.JPG']
     },
-    birmingham: {
+    Birmingham: {
         name: 'Birmingham, UK',
         text: 'My time in Birmingham.',
         folder: 'Birmingham',
         cover: 'IMG1.JPG', 
         photos: ['IMG1.JPG']
     },
-    cambridge: {
+    Cambridge: {
         name: 'Cambridge, UK',
         text: 'My time in Cambridge.',
         folder: 'Cambridge',
@@ -50,63 +50,63 @@ const places = {
         cover: 'IMG1.JPG', 
         photos: ['IMG1.JPG']
     },
-    edinbrugh: {
+    Edinbrugh: {
         name: 'Edinbrugh, UK',
         text: 'My time in Edingrugh.',
         folder: 'Edinbrugh',
         cover: 'IMG.JPG', 
         photos: ['IMG1.JPG']
     },
-    leicester: {
+    Leicester: {
         name: 'Leicester, UK',
         text: 'My time in Leicester.',
         folder: 'Leicester',
         cover: 'IMG1.JPG', 
         photos: ['IMG1.JPG']
     },
-    london: {
+    London: {
         name: 'London, UK',
         text: 'My time in London.',
         folder: 'London',
         cover: 'IMG.JPG', 
         photos: ['IMG1.JPG','IMG2.JPG']
     },
-     montenegro: {
+    Montenegro: {
         name: 'Montenegro',
         text: 'My time in Montenegro.',
         folder: 'Montenegro',
         cover: 'IMG1.JPG', 
         photos: ['IMG1.JPG','IMG2.JPG']
     },
-    new_castle: {
+    New_Castle: {
         name: 'New Castle Upon Tyne, UK',
         text: 'My time in New Castle Upon Tyne.',
         folder: 'New_Castle',
         cover: 'IMG.PNG', 
         photos: ['IMG1.PNG']
     },
-    scotland: {
+    Scotland: {
         name: 'Scotland, UK',
         text: 'My time in Scotland.',
         folder: 'Scotland',
         cover: 'IMG1.JPG', 
         photos: ['IMG1.JPG']
     },
-    skegness: {
+    Skegness: {
         name: 'Skegness, UK',
         text: 'My time in Skegness.',
         folder: 'Skegness',
         cover: 'IMG.JPG', 
         photos: ['IMG1.JPG','IMG2.JPG']
     },
-    stonehenge: {
+    Stonehenge: {
         name: 'Stonehenge, UK',
         text: 'My time in Stonehenge.',
         folder: 'Stonehenge',
         cover: 'IMG1.JPG', 
         photos: ['IMG1.JPG']
     },
-    whales: {
+    Whales: {
         name: 'Whales, UK',
         text: 'My time in Whales.',
         folder: 'Whales',
