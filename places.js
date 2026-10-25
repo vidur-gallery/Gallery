@@ -82,8 +82,8 @@ const places = {
         name: 'New Castle Upon Tyne, UK',
         text: 'My time in New Castle Upon Tyne.',
         folder: 'New_Castle',
-        cover: 'IMG0.png', 
-        photos: ['IMG1.png']
+        cover: 'IMG0.jpg', 
+        photos: ['IMG1.jpg']
     },
     Scotland: {
         name: 'Scotland, UK',
