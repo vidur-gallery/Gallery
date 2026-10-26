@@ -14,7 +14,7 @@ const places = {
         name: 'Berat, Albania',
         text: 'My time in Albania.',
         folder: 'Albania',
-        cover: 'IMG.JPG', 
+        cover: 'IMG0.JPG', 
         photos: ['IMG1.JPG','IMG2.JPG'],
         lat: 40.7058, lng: 19.9522
     },
@@ -22,7 +22,7 @@ const places = {
         name: 'Bath, UK',
         text: 'My time in Bath.',
         folder: 'Bath',
-        cover: 'IMG.JPG', 
+        cover: 'IMG0.JPG', 
         photos: ['IMG1.JPG'],
         lat: 51.3811, lng: -2.359
     },
@@ -30,7 +30,7 @@ const places = {
         name: 'Belfast, UK',
         text: 'My time in Belfast.',
         folder: 'Belfast',
-        cover: 'IMG.JPG', 
+        cover: 'IMG0.JPG', 
         photos: ['IMG1.JPG','IMG2.JPG','IMG3.JPG','IMG4.JPG','IMG5.JPG'],
         lat: 54.5973, lng: -5.9301
     },
@@ -62,7 +62,7 @@ const places = {
         name: 'Edinburgh, UK',
         text: 'My time in Edinburgh.',
         folder: 'Edinbrugh',
-        cover: 'IMG.JPG', 
+        cover: 'IMG0.JPG', 
         photos: ['IMG1.JPG'],
         lat: 55.9533, lng: -3.1883
     },
@@ -78,7 +78,7 @@ const places = {
         name: 'London, UK',
         text: 'My time in London.',
         folder: 'London',
-        cover: 'IMG.JPG', 
+        cover: 'IMG0.JPG', 
         photos: ['IMG1.JPG','IMG2.JPG'],
         lat: 51.5072, lng: -0.1276
     },
@@ -110,7 +110,7 @@ const places = {
         name: 'Skegness, UK',
         text: 'My time in Skegness.',
         folder: 'Skegness',
-        cover: 'IMG.JPG', 
+        cover: 'IMG0.JPG', 
         photos: ['IMG1.JPG','IMG2.JPG'],
         lat: 53.144, lng: 0.336
     },
@@ -134,7 +134,7 @@ const places = {
         name: 'York, UK',
         text: 'My time in York.',
         folder: 'York',
-        cover: 'IMG.JPG', 
+        cover: 'IMG0.JPG', 
         photos: ['IMG1.JPG'],
         lat: 53.9591, lng: -1.0815
     }
