@@ -8,12 +8,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="photo.css">
-    <link rel="icon" type="image/x-icon" href="Zicon/Favicon.png">
+    <link rel="stylesheet" href="photo.css?v=2">
+    <link rel="stylesheet" href="intro.css?v=2">    <!-- INTRO (delete to turn off) -->
+    <link rel="stylesheet" href="fade.css?v=2">     <!-- PAGE TRANSITION (delete to turn off) -->
 </head>
 <body>
 
     <div class="container">
+        <!-- MAP BUTTON (delete this line to turn off) -->
+        <a class="map-link" href="map.html"><i class="fa-solid fa-map-location-dot"></i> Map view</a>
+
         <div class="slide"></div>   <!-- filled by photo.js from places.js -->
 
         <div class="progress"><span></span></div>
@@ -24,5 +28,10 @@
         </div>
     </div>
 
-    <script src="places.js"></script>
-    <script src="photo.js"></script>
+    <script src="places.js?v=2"></script>
+    <script src="fade.js?v=2"></script>             <!-- PAGE TRANSITION (delete to turn off) -->
+    <script src="imgfix.js?v=2"></script>
+    <script src="intro.js?v=2"></script>            <!-- INTRO (delete to turn off) -->
+    <script src="photo.js?v=2"></script>
+</body>
+</html>

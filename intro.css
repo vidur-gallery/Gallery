@@ -1,0 +1,230 @@
+/* INTRO (boarding pass + passport stamps)
+   To turn it off: delete intro.css + intro.js and the 2 lines marked INTRO in the slider HTML. */
+
+#intro {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #16161c;
+    overflow: hidden;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    transition: opacity 0.9s ease 0.15s;
+}
+#intro.leave { opacity: 0; pointer-events: none; }
+
+/* hold the slider's text animations until the intro is finished */
+.intro-on .content .name,
+.intro-on .content .des,
+.intro-on .content button { animation-play-state: paused !important; }
+
+/* ---------- Pass ---------- */
+
+.intro-wrap {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    transition: transform 0.9s cubic-bezier(0.7, 0, 0.3, 1);
+}
+#intro.leave .intro-wrap { transform: translateY(-120vh) rotate(-5deg); }
+.intro-wrap.bump { animation: bump 0.18s ease; }
+@keyframes bump { 50% { transform: translateY(4px); } }
+
+.pass {
+    position: relative;
+    display: flex;
+    width: min(92vw, 580px);
+    overflow: hidden;
+    border-radius: 18px;
+    background: #f7f2e8;
+    color: #1b1b22;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+    animation: passIn 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
+}
+.pass::before {                      /* gradient stripe */
+    content: '';
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    height: 8px;
+    background: linear-gradient(90deg, #ff9ad5, #9ad1ff);
+}
+@keyframes passIn {
+    from { opacity: 0; transform: translateY(60px) rotate(-4deg) scale(0.95); }
+}
+
+.pass-main { flex: 1; min-width: 0; padding: 24px 22px 20px; }
+.pass-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #6b6659;
+}
+.route { display: flex; align-items: center; gap: 12px; margin: 14px 0 16px; }
+.route small, .meta small, .pass-stub small {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: #8a8472;
+}
+.route b {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-size: clamp(17px, 4.2vw, 25px);
+    line-height: 1;
+}
+.route .fly { flex: 1; min-width: 18px; display: flex; align-items: center; gap: 6px; color: #9a9380; }
+.route .fly::before { content: ''; flex: 1; border-top: 2px dashed #c9c0ad; }
+
+.meta { display: grid; grid-template-columns: repeat(4, auto); gap: 8px 14px; justify-content: start; }
+.meta b { font-size: 13px; font-weight: 600; white-space: nowrap; }
+
+.pass-stub {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    width: 27%;
+    padding: 24px 14px 18px;
+    border-left: 2px dashed #c9c0ad;
+}
+.pass-stub::before, .pass-stub::after {      /* ticket notches */
+    content: '';
+    position: absolute;
+    left: -11px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #16161c;
+}
+.pass-stub::before { top: -10px; }
+.pass-stub::after { bottom: -10px; }
+.pass-stub b { font-size: 15px; font-weight: 600; }
+.barcode {
+    height: 38px;
+    background: repeating-linear-gradient(90deg,
+        #1b1b22 0 2px, transparent 2px 4px,
+        #1b1b22 4px 5px, transparent 5px 8px,
+        #1b1b22 8px 11px, transparent 11px 12px,
+        #1b1b22 12px 13px, transparent 13px 16px);
+}
+
+.status { font-size: 13px; letter-spacing: 1px; color: rgba(255, 255, 255, 0.7); font-variant-numeric: tabular-nums; }
+
+/* ---------- Stamps ---------- */
+
+.stamps {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    transition: transform 0.9s cubic-bezier(0.7, 0, 0.3, 1) 0.05s;
+}
+#intro.leave .stamps { transform: translateY(-120vh); }
+
+.stamp {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    width: var(--s);
+    height: var(--s);
+    border: 3px solid var(--c);
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 4px transparent, inset 0 0 0 6px var(--c);
+    color: var(--c);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+    transform: translate(-50%, -50%) rotate(var(--r));
+    animation: stampIn 0.35s cubic-bezier(0.2, 1.4, 0.4, 1) backwards;
+}
+.stamp.rect { width: calc(var(--s) * 1.35); height: calc(var(--s) * 0.78); border-radius: 10px; }
+.stamp.dash { border-style: dashed; }
+.stamp small, .stamp span { font-size: calc(var(--s) * 0.09); letter-spacing: 1.5px; opacity: 0.85; }
+.stamp b { max-width: 100%; padding: 0 6px; line-height: 1.05; }
+@keyframes stampIn {
+    from { opacity: 0; transform: translate(-50%, -50%) rotate(var(--r)) scale(2.6); }
+    60%  { opacity: 0.95; }
+}
+
+/* ---------- Photographer touches: viewfinder + flash ---------- */
+
+.pass-head em { font-style: normal; }
+.pass-head i { color: #8a8472; }
+
+.vf {
+    position: absolute;
+    inset: 26px;
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+#intro.focus .vf { opacity: 1; }
+.vf > i { position: absolute; width: 38px; height: 38px; border: 0 solid rgba(255, 255, 255, 0.9); }
+.vf > i:nth-child(1) { top: 0; left: 0; border-top-width: 3px; border-left-width: 3px; }
+.vf > i:nth-child(2) { top: 0; right: 0; border-top-width: 3px; border-right-width: 3px; }
+.vf > i:nth-child(3) { bottom: 0; left: 0; border-bottom-width: 3px; border-left-width: 3px; }
+.vf > i:nth-child(4) { bottom: 0; right: 0; border-bottom-width: 3px; border-right-width: 3px; }
+.vf > span {
+    position: absolute;
+    top: 8px;
+    left: 54px;
+    font: 500 12px/1 'DM Sans', ui-monospace, monospace;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.intro-flash {
+    position: fixed;
+    inset: 0;
+    z-index: 101;
+    background: #fff;
+    pointer-events: none;
+    animation: flash 0.7s ease-out forwards;
+}
+@keyframes flash { from { opacity: 1; } to { opacity: 0; } }
+
+/* ---------- Skip ---------- */
+
+.skip {
+    position: absolute;
+    bottom: 26px;
+    left: 50%;
+    z-index: 4;
+    transform: translateX(-50%);
+    height: 38px;
+    padding: 0 18px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font: 500 13px 'DM Sans', system-ui, sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.skip:hover { background: #fff; color: #111; }
+
+@media (max-width: 520px) {
+    .pass-head em { display: none; }
+    .route b { font-size: 14px; }
+    .vf > span { display: none; }
+    .route { gap: 8px; }
+    .meta { grid-template-columns: repeat(2, auto); }
+    .pass-main { padding: 22px 14px 16px; }
+    .pass-stub { width: 30%; padding: 22px 10px 14px; }
+}
